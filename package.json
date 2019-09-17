@@ -1,6 +1,6 @@
 {
   "name": "react-native-optional",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "A react native utility to render components conditionally",
   "main": "src/index.js",
   "scripts": {
@@ -40,9 +40,9 @@
   "homepage": "https://github.com/skillz/react-native-optional#readme",
   "author": "Rupal Totale <rupaltotale@gmail.com>",
   "contributors": [
-     "Rupal Totale (https://github.com/rupaltotale)",
-     "Greg Heirlihy (https://github.com/greghe)",
-     "Skillz (https://github.com/skillz)"
+    "Rupal Totale (https://github.com/rupaltotale)",
+    "Greg Heirlihy (https://github.com/greghe)",
+    "Skillz (https://github.com/skillz)"
   ],
   "license": "MIT"
 }
