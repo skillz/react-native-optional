@@ -101,14 +101,13 @@ To overcome this shortcoming of constructing an Optional component and its child
   
 To summarize, this plugin transforms:
 ```
-    <Optional test={test}>
-        <Child>
-          ...
-        </Child>
-    </Optional>
+  <Optional test={test}>
+      <Child>
+        ...
+      </Child>
+  </Optional>
 ```
   to: 
 ```
-  
-    {Boolean(test) && <Child>...</Child> }
+  {Boolean(test) && <Child>...</Child> }
 ```
