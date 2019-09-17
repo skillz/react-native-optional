@@ -91,3 +91,24 @@ export default App;
 | Name                                            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Details                  |
 | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
 | `test`                                 | Rendering of the child component(s) of ```<Optional>``` depends on the "truthiness" this prop's value.                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | **required**<br>boolean |
+
+| `test`                                 | Rendering of the child component(s) of ```<Optional>``` depends on the "truthiness" this prop's value.                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | **required**<br>boolean |
+### How it works
+
+The straightforward approach to tackling this issue is to create an Optional class that buils an <Optional> component with children components regardless of whether test passes ot fails. However, this hampers time and space performance as when the test fails (it has a falsy value), a useless Optional component and its subcomponents have been constructed despite not being displayed.
+  
+To overcome this shortcoming of constructing an Optional component and its children components when they don't not need to be created, the custome babel plugin reverses the order of events. When the code is being tranformed, upon encountering an <Optional> component, it first checks the value of its test prop and only if it evaluates to true, it allows for the creation of the subcomponents. Otherwise it skips past the <Optional> component.
+  
+To summarize, this plugin transforms:
+```
+    <Optional test={test}>
+        <Child>
+          ...
+        </Child>
+    </Optional>
+```
+  to: 
+```
+  
+    {Boolean(test) && <Child>...</Child> }
+```
