@@ -32,12 +32,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rupaltotale/react-native-optional.git"
+    "url": "https://github.com/skillz/react-native-optional"
   },
   "bugs": {
-    "url": "https://github.com/rupaltotale/react-native-optional/issues"
+    "url": "https://github.com/skillz/react-native-optional/issues"
   },
-  "homepage": "https://github.com/rupaltotale/react-native-optional#readme",
+  "homepage": "https://github.com/skillz/react-native-optional#readme",
   "author": "Rupal Totale <rupaltotale@gmail.com>",
+  "contributors": [
+     "Rupal Totale (https://github.com/rupaltotale)",
+     "Greg Heirlihy (https://github.com/greghe)",
+     "Skillz (https://github.com/skillz)"
+  ],
   "license": "MIT"
 }
