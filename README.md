@@ -93,7 +93,7 @@ export default App;
 | `test`                                 | Rendering of the child component(s) of ```<Optional>``` depends on the "truthiness" this prop's value.                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | **required**<br>boolean |
 
 | `test`                                 | Rendering of the child component(s) of ```<Optional>``` depends on the "truthiness" this prop's value.                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | **required**<br>boolean |
-### How it works
+## How it works
 
 The straightforward approach to tackling this issue is to create an Optional class that buils an <Optional> component with children components regardless of whether test passes ot fails. However, this hampers time and space performance as when the test fails (it has a falsy value), a useless Optional component and its subcomponents have been constructed despite not being displayed.
   
