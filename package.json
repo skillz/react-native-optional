@@ -1,6 +1,6 @@
 {
   "name": "react-native-optional",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "A react native utility to render components conditionally",
   "main": "src/index.js",
   "scripts": {
@@ -15,15 +15,20 @@
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {
-    "react": "16.8.6",
-    "react-native": "git://github.com/skillz/react-native.git#ce856ba9ae2ca0a64afaeb130817023a5718ef45"
+    "react": "*",
+    "react-native": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
-    "@types/react": "^16.8.19",
-    "@types/react-native": "^0.57.60",
-    "babel-eslint": "^10.0.2",
-    "babel-plugin-syntax-jsx": "^6.18.0"
+    "@babel/runtime": "^7.4.5",
+    "babel-plugin-jsx-syntax": "^6.18.0",
+    "@react-native-community/eslint-config": "^0.0.5",
+    "eslint": "^5.16.0",
+    "flow-bin": "^0.92.0",
+    "jest": "^24.8.0",
+    "metro-react-native-babel-preset": "^0.54.1",
+    "react": "16.8.3",
+    "react-native": "0.59.9"
   },
   "babel": {
     "plugins": [
@@ -38,7 +43,7 @@
     "url": "https://github.com/skillz/react-native-optional/issues"
   },
   "homepage": "https://github.com/skillz/react-native-optional#readme",
-  "author": "Rupal Totale <rupaltotale@gmail.com>",
+  "author": "Greg Heirlihy (https://github.com/greghe)",
   "contributors": [
     "Rupal Totale (https://github.com/rupaltotale)",
     "Greg Heirlihy (https://github.com/greghe)",

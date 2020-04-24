@@ -13,6 +13,12 @@ In your react native app directory, run the following command:
 
 `npm install react-native-optional`
 
+then add:
+
+` plugins: ['react-native-optional/babel'],`
+
+to your `babel.config.js` file.
+
 ### Basic Usage
 
 ```js

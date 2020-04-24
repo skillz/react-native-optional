@@ -23,19 +23,11 @@ export default class Optional extends React.Component {
   };
 
   constructor(props) {
-    if (!props.test) {
-      super({});
-    } else {
-      super(props);
-    }
-    this.test = props.test;
-
+    super(props);
   }
 
   render() {
-    if (this.test) {
-      return React.Children.only(this.props.children);
-    }
+    console.error("<Optional> is a babel transform plugin.\nTo correct this error, add:\n\nplugins:['react-nativer-optional/babel']\n\nto your babel.config.js file");
     return null;
   }
 }
