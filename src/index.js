@@ -4,31 +4,9 @@
  */
 import React from 'react';
 
-import PropTypes from 'prop-types';
-
-// This is a dummy element. 
-// The only part that matter is the keyword Optional and the prop type test (and its value)
-// The render function does have any effect. 
-export default class Optional extends React.Component {
-
-  static propTypes = {
-    test: PropTypes.oneOfType([
-      // these types can all evaluate to a boolean
-      PropTypes.bool,
-      PropTypes.number,
-      PropTypes.string,
-      PropTypes.array
-    ]).isRequired,
-    ...React.Component.propTypes
-  };
-
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    console.error("<Optional> is a babel transform plugin.\nTo correct this error, add:\n\nplugins:['react-nativer-optional/babel']\n\nto your babel.config.js file");
-    return null;
-  }
+function Optional(props: {test:boolean}) {
+  console.error("<Optional> is a babel transform plugin, not a React Compononent.\nTo correct this error, add:\n\nplugins:['react-nativer-optional/babel']\n\nto your babel.config.js file");
+  return null;
 }
 
+export default Optional;
